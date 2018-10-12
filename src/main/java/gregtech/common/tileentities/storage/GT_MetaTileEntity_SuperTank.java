@@ -33,6 +33,7 @@ public class GT_MetaTileEntity_SuperTank
     public ITexture[] getTexture(IGregTechTileEntity aBaseMetaTileEntity, byte aSide, byte aFacing, byte aColorIndex, boolean aActive, boolean aRedstone) {
         return aSide == 1 ? new ITexture[]{Textures.BlockIcons.MACHINE_CASINGS[mTier][aColorIndex + 1], new GT_RenderedTexture(Textures.BlockIcons.OVERLAY_STANK)} : new ITexture[]{Textures.BlockIcons.MACHINE_CASINGS[mTier][aColorIndex + 1]};
     }
+    
 
     @Override
     public void saveNBTData(NBTTagCompound aNBT) {
@@ -134,6 +135,8 @@ public class GT_MetaTileEntity_SuperTank
 
     private static int CommonSizeCompute(int tier){
         switch(tier){
+            case 0:
+                return  1000000;
             case 1:
                 return  4000000;
             case 2:

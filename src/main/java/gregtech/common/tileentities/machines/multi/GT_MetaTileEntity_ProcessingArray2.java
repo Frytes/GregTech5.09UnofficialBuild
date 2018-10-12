@@ -50,23 +50,23 @@ public class GT_MetaTileEntity_ProcessingArray2 extends GT_MetaTileEntity_MultiB
 
     public String[] getDescription() {
         return new String[]{
-                "Controller Block for the Processing Array T2",
+                "Controller Block for the Processing Array Mk 2",
                 "Runs supplied machines as if placed in the world",
                 "Size(WxHxD): 3x3x3 (Hollow), Controller (Front centered)",
                 "1x Input Hatch/Bus (Any casing)",
                 "1x Output Hatch/Bus (Any casing)",
                 "1x Maintenance Hatch (Any casing)",
                 "1x Energy Hatch (Any casing)",
-                "Mining Osmiridium Casings for the rest (14 at least!)",
-                "Place up to 64 Single Block GT Machines into the Controller Inventory",
-                "Maximal overclockedness of machines inside: Tier 9"};
+                "Robust Tungstensteel Casings for the rest (14 at least!)",
+                "Place up to 32 Single Block GT Machines into the Controller Inventory",
+                "Maximal overclockedness of machines inside: Tier 10"};
     }
 
     public ITexture[] getTexture(IGregTechTileEntity aBaseMetaTileEntity, byte aSide, byte aFacing, byte aColorIndex, boolean aActive, boolean aRedstone) {
         if (aSide == aFacing) {
-            return new ITexture[]{Textures.BlockIcons.CASING_BLOCKS[62], new GT_RenderedTexture(aActive ? Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE : Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY)};
+            return new ITexture[]{Textures.BlockIcons.CASING_BLOCKS[48], new GT_RenderedTexture(aActive ? Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE : Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY)};
         }
-        return new ITexture[]{Textures.BlockIcons.CASING_BLOCKS[62]};
+        return new ITexture[]{Textures.BlockIcons.CASING_BLOCKS[48]};
     }
 
     public Object getClientGUI(int aID, InventoryPlayer aPlayerInventory, IGregTechTileEntity aBaseMetaTileEntity) {
@@ -200,16 +200,16 @@ public class GT_MetaTileEntity_ProcessingArray2 extends GT_MetaTileEntity_MultiB
         ArrayList<ItemStack> tInputList = getStoredInputs();
 
         if (mInventory[1].getUnlocalizedName().endsWith("10")) {
-            tTier = 9;
+            tTier = 10;
             mMult = 2;//u need 4x less machines and they will use 4x less power
         } else if (mInventory[1].getUnlocalizedName().endsWith("11")) {
-            tTier = 9;
+            tTier = 10;
             mMult = 4;//u need 16x less machines and they will use 16x less power
         } else if (mInventory[1].getUnlocalizedName().endsWith("12") ||
                 mInventory[1].getUnlocalizedName().endsWith("13") ||
                 mInventory[1].getUnlocalizedName().endsWith("14") ||
                 mInventory[1].getUnlocalizedName().endsWith("15")) {
-            tTier = 9;
+            tTier = 10;
             mMult = 6;//u need 64x less machines and they will use 64x less power
         } else if (mInventory[1].getUnlocalizedName().endsWith("1")) {
             tTier = 1;
@@ -238,6 +238,9 @@ public class GT_MetaTileEntity_ProcessingArray2 extends GT_MetaTileEntity_MultiB
         } else if (mInventory[1].getUnlocalizedName().endsWith("9")) {
             tTier = 9;
             mMult = 0;//*1
+        } else if (mInventory[1].getUnlocalizedName().endsWith("10")) {
+            tTier = 10;
+            mMult = 0;//*1
         } else {
             tTier = 0;
             mMult = 0;//*1
@@ -261,7 +264,7 @@ public class GT_MetaTileEntity_ProcessingArray2 extends GT_MetaTileEntity_MultiB
                 this.mEUt = 0;
                 this.mOutputItems = null;
                 this.mOutputFluids = null;
-                int machines = Math.min(64, mInventory[1].stackSize << mMult); //Upped max Cap to 64
+                int machines = Math.min(32, mInventory[1].stackSize << mMult); //Upped max Cap to 64
                 int i = 0;
                 for (; i < machines; i++) {
                     if (!tRecipe.isRecipeInputEqual(true, tFluids, tInputs)) {
@@ -358,7 +361,7 @@ public class GT_MetaTileEntity_ProcessingArray2 extends GT_MetaTileEntity_MultiB
                 for (int h = -1; h < 2; h++) {
                     if ((h != 0) || (((xDir + i != 0) || (zDir + j != 0)) && ((i != 0) || (j != 0)))) {
                         IGregTechTileEntity tTileEntity = aBaseMetaTileEntity.getIGregTechTileEntityOffset(xDir + i, h, zDir + j);
-                        if ((!addMaintenanceToMachineList(tTileEntity, 62)) && (!addInputToMachineList(tTileEntity, 62)) && (!addOutputToMachineList(tTileEntity, 62)) && (!addEnergyInputToMachineList(tTileEntity, 62))) {
+                        if ((!addMaintenanceToMachineList(tTileEntity, 48)) && (!addInputToMachineList(tTileEntity, 48)) && (!addOutputToMachineList(tTileEntity, 48)) && (!addEnergyInputToMachineList(tTileEntity, 48))) {
                             if (aBaseMetaTileEntity.getBlockOffset(xDir + i, h, zDir + j) != GregTech_API.sBlockCasings4) {
                                 return false;
                             }

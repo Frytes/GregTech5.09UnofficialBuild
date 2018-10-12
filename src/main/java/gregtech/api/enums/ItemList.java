@@ -203,6 +203,10 @@ public enum ItemList implements IItemContainer {
     Cell_Water,
     Cell_Lava,
     Cell_Air,
+    Fluid_Cell_144L,
+    Fluid_Cell_36L,
+    Fluid_Cell_16L,
+    Fluid_Cell_1L,
     Large_Fluid_Cell_Steel,
     Large_Fluid_Cell_TungstenSteel,
     Large_Fluid_Cell_Aluminium, 
@@ -363,9 +367,10 @@ public enum ItemList implements IItemContainer {
     Circuit_Elite,
     Circuit_Master,
     Circuit_Ultimate,
-    Circuit_Nano,
-    Circuit_Wafer_UHPIC, Circuit_Chip_UHPIC, Circuit_Parts_RawCrystalParts, 
-    Circuit_Board_Coated_Basic, Circuit_Board_Phenolic_Good, Circuit_Board_Epoxy_Advanced, Circuit_Board_Fiberglass_Advanced, Circuit_Board_Multifiberglass_Elite, Circuit_Board_Wetware_Extreme, Circuit_Board_Plastic_Advanced, 
+    Circuit_Biowarecomputer,
+    Circuit_Biowaresupercomputer, Circuit_Bioprocessor,
+    Circuit_Wafer_UHPIC, Circuit_Chip_UHPIC,
+    Circuit_Board_Coated_Basic, Circuit_Board_Phenolic_Good, Circuit_Board_Epoxy_Advanced, Circuit_Board_Fiberglass_Advanced, Circuit_Board_Multifiberglass_Elite, Circuit_Board_Wetware_Extreme, 
     Rotor_LV, Rotor_MV, Rotor_HV, Rotor_EV, Rotor_IV, Rotor_LuV, Rotor_ZPM, Rotor_UV,
     Electric_Motor_LV, Electric_Motor_MV, Electric_Motor_HV, Electric_Motor_EV, Electric_Motor_IV, Electric_Motor_LuV, Electric_Motor_ZPM, Electric_Motor_UV, Electric_Motor_UHV, Electric_Motor_UEV,
     Electric_Pump_LV, Electric_Pump_MV, Electric_Pump_HV, Electric_Pump_EV, Electric_Pump_IV, Electric_Pump_LuV, Electric_Pump_ZPM, Electric_Pump_UV, Electric_Pump_UHV, Electric_Pump_UEV,
@@ -541,6 +546,8 @@ public enum ItemList implements IItemContainer {
     Generator_Naquadah_Mark_VI,
     Generator_Naquadah_Mark_VII,
     Generator_Naquadah_Mark_VIII,
+    
+    Generator_DarkMatter_Mark_I,
 
     Machine_Bronze_Boiler,
     Machine_Bronze_Boiler_Solar,
@@ -655,8 +662,8 @@ public enum ItemList implements IItemContainer {
     ThoriumCell_1, ThoriumCell_2, ThoriumCell_4,
     Depleted_MNq_1, Depleted_MNq_2, Depleted_MNq_4,
     MNqCell_1, MNqCell_2, MNqCell_4,
-    FusionComputer_LuV, FusionComputer_ZPMV, FusionComputer_UV, FusionComputer_UHV,
-    Casing_Fusion_Coil, Casing_Fusion, Casing_Fusion2, Casing_Fusion3,
+    FusionComputer_LuV, FusionComputer_ZPMV, FusionComputer_UV, FusionComputer_UHV, FusionComputer_UEV,
+    Casing_Fusion_Coil, Casing_Fusion, Casing_Fusion2, Casing_Fusion3, Casing_Fusion4, Casing_Fusion_Coil2,
     Generator_Plasma_IV, Generator_Plasma_LuV, Generator_Plasma_ZPMV,
     MagicEnergyConverter_LV, MagicEnergyConverter_MV, MagicEnergyConverter_HV,
     MagicEnergyAbsorber_LV, MagicEnergyAbsorber_MV, MagicEnergyAbsorber_HV, MagicEnergyAbsorber_EV,
@@ -664,7 +671,7 @@ public enum ItemList implements IItemContainer {
     Processing_Array_T1, Processing_Array_T2, Processing_Array_T3, Distillation_Tower, Energy_LapotronicOrb2,
     Energy_Module, Energy_Cluster,
     ZPM2, ZPM3, Quantum_Tank_LV, Quantum_Tank_MV, Quantum_Tank_HV, Quantum_Tank_EV, Quantum_Tank_IV, Quantum_Chest_LV, Quantum_Chest_MV, Quantum_Chest_HV, Quantum_Chest_EV, Quantum_Chest_IV,
-    Super_Tank_LV, Super_Tank_MV, Super_Tank_HV, Super_Tank_EV, Super_Tank_IV, Super_Chest_LV, Super_Chest_MV, Super_Chest_HV, Super_Chest_EV, Super_Chest_IV,
+    Super_Tank_ULV, Super_Tank_LV, Super_Tank_MV, Super_Tank_HV, Super_Tank_EV, Super_Tank_IV, Super_Chest_LV, Super_Chest_MV, Super_Chest_HV, Super_Chest_EV, Super_Chest_IV,
 
 
     NULL, Cover_RedstoneTransmitterExternal, Cover_RedstoneTransmitterInternal, Cover_RedstoneReceiverExternal, Cover_RedstoneReceiverInternal,
@@ -684,14 +691,14 @@ public enum ItemList implements IItemContainer {
     ModularElectric1Helmet, ModularElectric1Chestplate, ModularElectric1Leggings, ModularElectric1Boots,
     ModularElectric2Helmet, ModularElectric2Chestplate, ModularElectric2Leggings, ModularElectric2Boots, Block_Powderbarrel, GelledToluene,
     FluidRegulator_LV, FluidRegulator_MV, FluidRegulator_HV, FluidRegulator_EV, FluidRegulator_IV, FluidRegulator_LuV, FluidRegulator_ZPM, FluidRegulator_UV, FluidFilter, CuringOven, Machine_Multi_Assemblyline, Machine_Multi_DieselEngine, Machine_Multi_PlasmaEngine, QuantumEye, QuantumStar, Gravistar, Block_SSFUEL, Block_MSSFUEL, SFMixture, MSFMixture, Depleted_Naquadah_1, Depleted_Naquadah_2, Depleted_Naquadah_4, NaquadahCell_1, NaquadahCell_2, NaquadahCell_4, Hatch_AutoMaintenance,
-    Machine_Multi_Cleanroom, Circuit_Board_Coated, Circuit_Board_Phenolic, Circuit_Board_Epoxy, Circuit_Board_Fiberglass, Circuit_Board_Multifiberglass, Circuit_Board_Wetware, Circuit_Board_Plastic,
-    Circuit_Parts_Resistor, Circuit_Parts_ResistorSMD, Circuit_Parts_Glass_Tube, Circuit_Parts_Vacuum_Tube, NandChip, Circuit_Parts_Coil, Circuit_Parts_Diode, Circuit_Parts_DiodeSMD, Circuit_Parts_Transistor, Circuit_Parts_TransistorSMD, Circuit_Parts_Capacitor, Circuit_Parts_CapacitorSMD, Circuit_Parts_GlassFiber, Circuit_Parts_PetriDish,
+    Machine_Multi_Cleanroom, Circuit_Board_Coated, Circuit_Board_Phenolic, Circuit_Board_Epoxy, Circuit_Board_Fiberglass, Circuit_Board_Multifiberglass, Circuit_Board_Wetware, Circuit_Board_Plastic, Circuit_Board_Plastic_Advanced, Circuit_Board_Bio, Circuit_Board_Bio_Ultra, Circuit_Biomainframe,
+    Circuit_Parts_Resistor, Circuit_Parts_ResistorSMD, Circuit_Parts_Glass_Tube, Circuit_Parts_Reinforced_Glass_Tube, Circuit_Parts_Vacuum_Tube, NandChip, Circuit_Parts_Coil, Circuit_Parts_Diode, Circuit_Parts_DiodeSMD, Circuit_Parts_Transistor, Circuit_Parts_TransistorSMD, Circuit_Parts_Capacitor, Circuit_Parts_CapacitorSMD, Circuit_Parts_GlassFiber, Circuit_Parts_PetriDish,
     Circuit_Silicon_Ingot, Circuit_Silicon_Ingot2, Circuit_Silicon_Ingot3, Circuit_Silicon_Ingot4, Circuit_Silicon_Ingot5, Circuit_Silicon_Ingot6, Circuit_Silicon_Wafer, Circuit_Silicon_Wafer2, Circuit_Silicon_Wafer3, Circuit_Silicon_Wafer4, Circuit_Silicon_Wafer5, Circuit_Silicon_Wafer6, Circuit_Wafer_ILC, Circuit_Chip_ILC, Circuit_Wafer_Ram, Circuit_Chip_Ram, 
     Circuit_Wafer_NAND, Circuit_Chip_NAND, Circuit_Wafer_NOR, Circuit_Chip_NOR, Circuit_Wafer_CPU, Circuit_Chip_CPU, Circuit_Wafer_SoC, Circuit_Chip_SoC, Circuit_Wafer_SoC2, Circuit_Wafer_SoC3, Circuit_Wafer_SoC4, Circuit_Chip_SoC2, Circuit_Chip_SoC3, Circuit_Chip_SoC4, Circuit_Wafer_PIC, Circuit_Chip_PIC, Circuit_Wafer_Simple_SoC, Circuit_Chip_Simple_SoC,
     Circuit_Wafer_HPIC, Circuit_Chip_HPIC, Circuit_Wafer_NanoCPU, Circuit_Chip_NanoCPU, Circuit_Wafer_QuantumCPU, Circuit_Chip_QuantumCPU, 
-    Circuit_Chip_CrystalCPU, Circuit_Chip_CrystalSoC, Circuit_Chip_NeuroCPU, Circuit_Chip_Stemcell,
+    Circuit_Chip_CrystalCPU, Circuit_Chip_CrystalSoC, Circuit_Chip_CrystalSoC2, Circuit_Chip_NeuroCPU, Circuit_Chip_BioCPU, Circuit_Chip_Stemcell, Circuit_Parts_RawCrystalParts, Circuit_Chip_Biocell,
     Circuit_Microprocessor, Circuit_Processor, Circuit_Computer, Circuit_Nanoprocessor, Circuit_Nanocomputer, Circuit_Elitenanocomputer, Circuit_Quantumprocessor, Circuit_Quantumcomputer, Circuit_Masterquantumcomputer, 
-    Circuit_Quantummainframe, Circuit_Crystalprocessor, Circuit_Crystalcomputer, Circuit_Ultimatecrystalcomputer, Circuit_Crystalmainframe, Circuit_Neuroprocessor, Circuit_Wetwarecomputer, Circuit_Wetwaresupercomputer, Circuit_Wetwaremainframe, Circuit_Parts_RawCrystalChip,
+    Circuit_Quantummainframe, Circuit_Crystalprocessor, Circuit_Crystalcomputer, Circuit_Ultimatecrystalcomputer, Circuit_Crystalmainframe, Circuit_Neuroprocessor, Circuit_Wetwarecomputer, Circuit_Wetwaresupercomputer, Circuit_Wetwaremainframe, Circuit_Parts_RawCrystalChip, 
     Machine_LV_CircuitAssembler, Machine_MV_CircuitAssembler, Machine_HV_CircuitAssembler, Machine_EV_CircuitAssembler, Machine_IV_CircuitAssembler, Machine_LuV_CircuitAssembler, Machine_ZPM_CircuitAssembler, Machine_UV_CircuitAssembler, Machine_UHV_CircuitAssembler, Machine_UEV_CircuitAssembler, Machine_UIV_CircuitAssembler, Machine_UMV_CircuitAssembler, Machine_UXV_CircuitAssembler, Machine_OPV_CircuitAssembler, Circuit_Integrated_Good, 
     Machine_IV_LightningRod, Machine_HV_LightningRod, Machine_EV_LightningRod, Machine_LuV_LightningRod, Machine_ZPM_LightningRod, Machine_UV_LightningRod,
     
@@ -705,6 +712,7 @@ public enum ItemList implements IItemContainer {
 	Transformer_UEV_UHV, Transformer_UIV_UEV, Transformer_UMV_UIV, Transformer_UXV_UMV, Transformer_OPV_UXV, Transformer_MAXV_OPV,
 	BatteryHull_EV, BatteryHull_IV, BatteryHull_LuV, BatteryHull_ZPM, BatteryHull_UV, BatteryHull_UHV, BatteryHull_UEV, BatteryHull_UIV, BatteryHull_UMV, BatteryHull_UxV,
 	BatteryHull_EV_Full, BatteryHull_IV_Full, BatteryHull_LuV_Full, BatteryHull_ZPM_Full, BatteryHull_UV_Full, BatteryHull_UHV_Full, BatteryHull_UEV_Full, BatteryHull_UIV_Full, BatteryHull_UMV_Full, BatteryHull_UxV_Full,
+	EnergyCrystal_LV, EnergyCrystal_MV, EnergyCrystal_HV, EnergyCrystal_EV, EnergyCrystal_IV,
 	Battery_TurboCharger_4by4_ULV, Battery_TurboCharger_4by4_LV, Battery_TurboCharger_4by4_MV, Battery_TurboCharger_4by4_HV, Battery_TurboCharger_4by4_EV, Battery_TurboCharger_4by4_IV, Battery_TurboCharger_4by4_LuV, Battery_TurboCharger_4by4_ZPM, Battery_TurboCharger_4by4_UV, Battery_TurboCharger_4by4_UHV,Battery_TurboCharger_4by4_UEV, Battery_TurboCharger_4by4_UIV, Battery_TurboCharger_4by4_UMV, Battery_TurboCharger_4by4_UXV, Battery_TurboCharger_4by4_OPV, Battery_TurboCharger_4by4_MAXV,
 	Generator_Plasma_UV, Generator_Plasma_UHV, Generator_Plasma_UEV, Generator_Plasma_UIV, Generator_Plasma_UMV, Generator_Plasma_UXV, Generator_Naquadah_Mark_III, 
 	AlloySmelterUHV, AlloySmelterUEV, AlloySmelterUIV, AlloySmelterUMV, AlloySmelterUXV, AlloySmelterOPV,
@@ -764,6 +772,7 @@ public enum ItemList implements IItemContainer {
 	
 	WetTransformer_LV_ULV, WetTransformer_MV_LV, WetTransformer_HV_MV, WetTransformer_EV_HV, WetTransformer_IV_EV, WetTransformer_LuV_IV, WetTransformer_ZPM_LuV, WetTransformer_UV_ZPM, WetTransformer_UHV_UV, WetTransformer_UEV_UHV, WetTransformer_UIV_UEV, WetTransformer_UMV_UIV, WetTransformer_UXV_UMV, WetTransformer_OPV_UXV, WetTransformer_MAXV_OPV,
 	Transformer_HA_LV_ULV, Transformer_HA_MV_LV, Transformer_HA_HV_MV, Transformer_HA_EV_HV, Transformer_HA_IV_EV, Transformer_HA_LuV_IV, Transformer_HA_ZPM_LuV, Transformer_HA_UV_ZPM, Transformer_HA_UHV_UV, Transformer_HA_UEV_UHV, Transformer_HA_UIV_UEV, Transformer_HA_UMV_UIV, Transformer_HA_UXV_UMV, Transformer_HA_OPV_UXV, Transformer_HA_MAXV_OPV,
+	Transformer_Ultra_HV_MV, Transformer_Ultra_EV_HV, Transformer_Ultra_IV_EV, Transformer_Ultra_LuV_IV, Transformer_Ultra_ZPM_LuV, Transformer_Ultra_UV_ZPM, Transformer_Ultra_UHV_UV, Transformer_Ultra_UEV_UHV, Transformer_Ultra_UIV_UEV, Transformer_Ultra_UMV_UIV, Transformer_Ultra_UXV_UMV, Transformer_Ultra_OPV_UXV, Transformer_Ultra_MAXV_OPV,
 	
 	AdsorptionFilter, AdsorptionFilterCasing, AdsorptionFilterDirty, Machine_Multi_AirFilter, Casing_AirFilter, Casing_AirFilter_Vent;
     

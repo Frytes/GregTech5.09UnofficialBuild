@@ -97,6 +97,6 @@ public class GT_MetaTileEntity_PlasmaGenerator
 
 	@Override
 	public int getPollution() {
-		return 20;
+		return 0;
 	}
 }
